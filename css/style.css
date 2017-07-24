@@ -10,19 +10,108 @@
 
 #graph {
   float: right;
-  background: grey;
-  width: 900px;
-  height: 760px;
+  background: white;
+  width: 1030px;
+  height: 720px;
   border: 1px solid black;
 }
 
-textarea {
-  width: 100%;
-  height: 50px;
+#submitbtn{
+
+  -webkit-box-shadow: 2px 2px 2px 1px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    2px 2px 2px 1px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         2px 2px 2px 1px grey;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+	border : solid 1px grey;
+	font-size : 14px;
+	color : #000000;
+	padding : 1px 17px;
+	background : #000000;
+	background : -webkit-gradient(linear, left top, left bottom, color-stop(0%,#A9A9A9), color-stop(0%,rgb(91, 152, 227)), color-stop(100%,rgb(91, 152, 227)));
+	background : -moz-linear-gradient(top, #A9A9A9 0%, rgb(91, 152, 227) 0%, rgb(91, 152, 227) 100%);
+	background : -webkit-linear-gradient(top, #A9A9A9 0%, rgb(91, 152, 227) 0%, rgb(91, 152, 227) 100%);
+	background : -o-linear-gradient(top, #A9A9A9 0%, rgb(91, 152, 227) 0%, rgb(91, 152, 227) 100%);
+	background : -ms-linear-gradient(top, #A9A9A9 0%, rgb(91, 152, 227) 0%, rgb(91, 152, 227) 100%);
+	background : linear-gradient(top, #A9A9A9 0%, rgb(91, 152, 227) 0%, rgb(91, 152, 227) 100%);
+	filter : progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='rgb(91, 152, 227)',GradientType=0 );
+
+}
+
+/*resizing boxes*/
+#requestingOfficer {
+  box-sizing: content-box;
+  width: 90%;
+  height: 25px;
   padding: 12px 20px;
-  box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
   background-color: #f8f8f8;
   resize: none;
+  outline: none;
+  overflow: hidden;
 }
+
+#forensicImaging {
+  box-sizing: content-box;
+  width: 90%;
+  height: 25px;
+  padding: 12px 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  outline: none;
+  overflow: hidden;
+}
+
+#forensicExamination {
+  box-sizing: content-box;
+  width: 90%;
+  height: 25px;
+  padding: 12px 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  outline: none;
+  overflow: hidden;
+}
+
+#backgroundInfo {
+  box-sizing: content-box;
+  width: 90%;
+  height: 25px;
+  padding: 12px 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  outline: none;
+  overflow: hidden;
+}
+
+#conclusion {
+  box-sizing: content-box;
+  width: 90%;
+  height: 25px;
+  padding: 12px 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  outline: none;
+  overflow: hidden;
+}
+
+#address {
+  box-sizing: content-box;
+  width: 90%;
+  height: 25px;
+  padding: 12px 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  outline: none;
+  overflow: hidden;
+}
+/*resizing boxes end*/

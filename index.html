@@ -5,14 +5,53 @@
   <meta charset="utf-8">
   <title>Vis JS</title>
   <script type="text/javascript" src="javascript/vis.min.js"></script>
+  <script type="text/javascript" src="javascript/textarea-autogrow.js"></script>
   <link rel="stylesheet" type="text/css" href="css/vis.min.css">
+  <link rel="stylesheet" type="text/css" href="css/vis.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <script>
+  document.onreadystatechange = function(){
+    if(document.readyState == "complete"){
+      var maxLines = 15,
+        textarea = document.getElementById('requestingOfficer');
+      var autoGrowTextarea = new Autogrow(textarea, maxLines);
+      }
+      if(document.readyState == "complete"){
+        var maxLines = 15,
+          textarea = document.getElementById('backgroundInfo');
+        var autoGrowTextarea = new Autogrow(textarea, maxLines);
+      }
+      if(document.readyState == "complete"){
+        var maxLines = 10,
+          textarea = document.getElementById('forensicImaging');
+        var autoGrowTextarea = new Autogrow(textarea, maxLines);
+      }
+      if(document.readyState == "complete"){
+        var maxLines = 10,
+          textarea = document.getElementById('forensicExamination');
+        var autoGrowTextarea = new Autogrow(textarea, maxLines);
+      }
+      if(document.readyState == "complete"){
+        var maxLines = 10,
+          textarea = document.getElementById('conclusion');
+        var autoGrowTextarea = new Autogrow(textarea, maxLines);
+      }
+      if(document.readyState == "complete"){
+        var maxLines = 10,
+          textarea = document.getElementById('address');
+        var autoGrowTextarea = new Autogrow(textarea, maxLines);
+      }
+  }
+
+
+  </script>
 </head>
 
 <body>
   <div id="graph">
-
   </div>
+
   <div id="myFormContainer">
 
     <!--THE FORM -->
@@ -22,6 +61,7 @@
 
         <!-- ***HEADER*** -->
         <div name="header" class="header" id="header">
+          Case: <input type="text" name="caseName" id="caseName" /><br />
           Location: <input type="text" name="location" id="location" /><br/>
           Case Number: <input type="text" name="caseNumber" id="caseNumber" /><br/>
           Forensic Examiner: <input type="text" name="forensicExaminer" id="forensicExaminer" /><br/>
@@ -30,7 +70,7 @@
 
         <!-- ***Request*** -->
         <div name="request" class="request" id="request">
-          Requesting Officer Information: <textarea name="requestingOfficer" id="requestingOfficer"></textarea><br />
+          Requesting Officer Information: <textarea name="requestingOfficer" rows="3" id="requestingOfficer"></textarea><br />
         </div>
 
 
@@ -40,7 +80,7 @@
         </div>
 
         <!-- ***Digital Evidence Summary Report*** -->
-        <div name="digitalEvidenceSummart" class="digitalEvidenceSummary" id="digitalEvidenceSummary">
+        <div name="digitalEvidenceSummary" class="digitalEvidenceSummary" id="digitalEvidenceSummary">
           <p>Digital Evidence Summary Report -</p>
           <!-- ***Forensic Imaging*** -->
           Forensic Imaging: <textarea name="forensicImaging" id="forensicImaging"></textarea><br />
@@ -55,10 +95,15 @@
 
         <!-- ***Contact Information -->
         <div name="contactInfo" id="contactInfo">
-          Office: <input type="text" name="office" /><br /> Unit: <input type="text" name="unit" /><br /> Forensic Examiner: <input type="text" name="forensicExaminerTwo" /><br /> Address - Street: <input type="text" name="streetAddress" /><br /> City:
-          <input type="text" name="cityAddress" /><br /> State: <input type="text" name="stateAddress" /><br /> Zip: <input type="text" name="zipAddress" /><br /> Office Phone: <input type="text" name="officePhone" /><br /> Cell Phone: <input type="text"
-            name="cellPhone" /><br /> Email: <input type="text" name="email" /><br />
+         Office: <input type="text" name="office" /><br />
+         Unit: <input type="text" name="unit" /><br />
+         Office Phone: <input type="text" name="officePhone" /><br />
+         Cell Phone: <input type="text" name="cellPhone" /><br />
+         Email: <input type="text" name="email" /><br />
+         Address: <textarea name="address" id="address"></textarea>
         </div>
+
+
 
         <input type="submit" id="submitbtn" value="Submit">
       </form>
@@ -67,6 +112,8 @@
 
   </div>
   </div>
+
 </body>
 <script type="text/javascript" src="javascript/script.js"></script>
+<script type="text/javascript" src="javascript/tree.js"></script>
 </html>
